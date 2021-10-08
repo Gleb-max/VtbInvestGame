@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: 20,
-    elevation: 12,
+    elevation: 8,
   },
 
   containerActive: {

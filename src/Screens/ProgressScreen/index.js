@@ -3,6 +3,7 @@ import {View} from 'react-native';
 import ProgressBlock from '../../Components/ProgressBlock';
 import commonStyles from '../../MixIn/commonStyles';
 import {styles} from './styles';
+import Dialogue from '../../Components/Dialogue';
 
 const ProgressScreen = () => {
   return (
@@ -11,6 +12,7 @@ const ProgressScreen = () => {
       <ProgressBlock active={true} text={'Облигации'} />
       <ProgressBlock active={false} text={'Фонды'} />
       <ProgressBlock active={false} text={'Акции'} />
+      <Dialogue />
     </View>
   );
 };
