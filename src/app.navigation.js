@@ -3,7 +3,7 @@ import React from 'react';
 
 //navigation
 import { enableScreens } from 'react-native-screens';
-import {HomeNavigation} from './Screens/main';
+import {HomeNavigation} from './screens/main';
 
 //navigators
 
