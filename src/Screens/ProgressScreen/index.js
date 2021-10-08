@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import {View} from 'react-native';
 import ProgressBlock from '../../Components/ProgressBlock';
@@ -5,7 +6,7 @@ import commonStyles from '../../MixIn/commonStyles';
 import {styles} from './styles';
 import Dialogue from '../../Components/Dialogue';
 
-const ProgressScreen = () => {
+export const ProgressScreen = () => {
   return (
     <View style={[commonStyles.container, styles.container]}>
       <View style={styles.verticalLine} />
@@ -16,5 +17,3 @@ const ProgressScreen = () => {
     </View>
   );
 };
-
-export default ProgressScreen;
