@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React, {useState} from 'react';
 import {Image, Text, View} from 'react-native';
 import Slider from 'react-native-slider';

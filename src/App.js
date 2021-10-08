@@ -1,15 +1,21 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {getUser} from './Utils/Storage';
-import ProfileScreen from './Screens/ProfileScreen';
-import WelcomeScreen from './Screens/WelcomeScreen';
+
 import {Text} from 'react-native';
 import ProgressScreen from './Screens/ProgressScreen';
 
-const App: () => Node = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [lookedWelcome, setLookedWelcome] = useState();
+import WelcomeScreen from './screens/WelcomeScreen';
 
-  useEffect(() => {
+//navigation
+import {NavigationContainer} from '@react-navigation/native';
+import {AppNavigation} from './app.navigation';
+
+// console.disableYellowBox = true;
+
+const App = () => {
+  const [isLoading, setIsLoading] = React.useState(true);
+  const [lookedWelcome, setLookedWelcome] = React.useState();
+  React.useEffect(() => {
     getUser().then(user => {
       setIsLoading(false);
       setLookedWelcome(user.lookedWelcome);
@@ -17,12 +23,13 @@ const App: () => Node = () => {
   }, []);
 
   return isLoading ? (
-    <Text>{'Loading'}</Text>
+    <Text>Loading</Text>
   ) : lookedWelcome ? (
-    <ProgressScreen />
+    <NavigationContainer>
+      <AppNavigation />
+    </NavigationContainer>
   ) : (
     <WelcomeScreen />
   );
 };
-
 export default App;
