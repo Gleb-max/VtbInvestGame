@@ -5,6 +5,7 @@ import commonStyles from '../../MixIn/commonStyles';
 import {styles} from './styles';
 import Colors from '../../Constants/Colors';
 import SimpleButton from '../../Components/SimpleButton';
+import {saveUser, updateUser} from '../../Utils/Storage';
 
 const WelcomeScreen = () => {
   const [sliderValue, setSliderValue] = useState(1100000);
@@ -39,12 +40,7 @@ const WelcomeScreen = () => {
 
         {showAnswer ? (
           <View>
-            <Text
-              style={[
-                commonStyles.text,
-                styles.text,
-                {marginTop: 20, color: Colors.predarkBlue},
-              ]}>
+            <Text style={[commonStyles.text, styles.text, {marginTop: 20}]}>
               {
                 'Чтобы чувствовать себя так же,\nкак с миллионом в 2014 году,\nсейчас нужно 1.45 млн.'
               }
@@ -59,7 +55,10 @@ const WelcomeScreen = () => {
             </Text>
             <SimpleButton
               text={'Далее'}
-              onPress={() => console.warn('not implement')}
+              onPress={() => {
+                updateUser({lookedWelcome: true});
+                console.warn('not implement');
+              }}
               containerStyle={{alignSelf: 'center', marginTop: 20, width: 100}}
             />
           </View>
