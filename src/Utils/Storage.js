@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import SecureStorage from 'react-native-secure-storage';
 
 const userKey = 'AuthenticationToken';

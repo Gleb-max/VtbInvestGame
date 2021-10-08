@@ -13,7 +13,7 @@ import { MainNavigation } from '../MainScreen';
 // import { NewsNavigation } from 'screens/NewsScreen';
 // import { AnalyticsNavigation } from 'screens/AnalyticsScreen';
 // import { AdvicesNavigation } from 'screens/AdvicesScreen';
-// import { ProfileNavigation } from 'screens/ProfileScreen';
+import { ProfileScreen } from '../ProfileScreen';
 
 //features navigators
 // import { NotificationsNavigation } from 'screens/NotificationsScreen';
@@ -90,10 +90,10 @@ const routes = [
 	// 	...mapRouteNameToData['main/drop'],
 	// 	screen: AdvicesNavigation,
 	// },
-	// {
-	// 	...mapRouteNameToData['main/account'],
-	// 	screen: ProfileNavigation,
-	// },
+	{
+		...mapRouteNameToData['main/account'],
+		screen: ProfileScreen,
+	},
 ];
 
 const HomeNativeStack = createNativeStackNavigator();

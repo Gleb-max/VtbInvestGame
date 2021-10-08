@@ -1,17 +1,34 @@
-/* eslint-disable prettier/prettier */
 import React from 'react';
+import {getUser} from './Utils/Storage';
+
+import {Text} from 'react-native';
+
+import WelcomeScreen from './screens/WelcomeScreen';
 
 //navigation
-import { NavigationContainer } from '@react-navigation/native';
-import { AppNavigation } from './app.navigation';
+import {NavigationContainer} from '@react-navigation/native';
+import {AppNavigation} from './app.navigation';
 
 // console.disableYellowBox = true;
 
 const App = () => {
-	return (
-		<NavigationContainer>
-			<AppNavigation />
-		</NavigationContainer>
-	);
+  const [isLoading, setIsLoading] = React.useState(true);
+  const [lookedWelcome, setLookedWelcome] = React.useState();
+  React.useEffect(() => {
+    getUser().then(user => {
+      setIsLoading(false);
+      setLookedWelcome(user.lookedWelcome);
+    });
+  }, []);
+
+  return isLoading ? (
+    <Text>Loading</Text>
+  ) : lookedWelcome ? (
+    <NavigationContainer>
+      <AppNavigation />
+    </NavigationContainer>
+  ) : (
+    <WelcomeScreen />
+  );
 };
 export default App;
