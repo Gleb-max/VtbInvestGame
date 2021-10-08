@@ -3,6 +3,7 @@ import {getUser} from './Utils/Storage';
 import ProfileScreen from './Screens/ProfileScreen';
 import WelcomeScreen from './Screens/WelcomeScreen';
 import {Text} from 'react-native';
+import ProgressScreen from './Screens/ProgressScreen';
 
 const App: () => Node = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -18,7 +19,7 @@ const App: () => Node = () => {
   return isLoading ? (
     <Text>{'Loading'}</Text>
   ) : lookedWelcome ? (
-    <ProfileScreen />
+    <ProgressScreen />
   ) : (
     <WelcomeScreen />
   );
