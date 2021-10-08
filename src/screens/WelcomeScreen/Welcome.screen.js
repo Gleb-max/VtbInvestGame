@@ -1,8 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 
-//navigation
-import { useNavigation } from '@react-navigation/native';
+import {updateUser} from '../../Utils/Storage';
 
 //views
 import { WelcomeView } from './Welcome.view';
@@ -10,11 +9,9 @@ import { WelcomeView } from './Welcome.view';
 export const WelcomeScreen = ({
 
 }) => {
-	//navigation
-	// const navigation = useNavigation();
-
 	//callbacks
 	const _onWelcomeComplete = React.useCallback(() => {
+		updateUser({lookedWelcome: true});
 		console.warn('not implement');
 	}, []);
 
