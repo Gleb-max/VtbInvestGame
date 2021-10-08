@@ -5,7 +5,7 @@ import {getUser} from './Utils/Storage';
 import {Text} from 'react-native';
 import {ProgressScreen} from './Screens/ProgressScreen';
 
-import WelcomeScreen from './screens/WelcomeScreen';
+import {WelcomeNavigation} from './screens/WelcomeScreen';
 
 //navigation
 import {NavigationContainer} from '@react-navigation/native';
@@ -26,11 +26,11 @@ const App = () => {
   return isLoading ? (
     <Text>Loading</Text>
   ) : lookedWelcome ? (
-    <NavigationContainer>
+    <NavigationContainer >
       <AppNavigation />
     </NavigationContainer>
   ) : (
-    <WelcomeScreen />
+    <WelcomeNavigation />
   );
 };
 export default App;
