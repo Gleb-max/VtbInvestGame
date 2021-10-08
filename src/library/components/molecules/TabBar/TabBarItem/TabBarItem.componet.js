@@ -15,7 +15,7 @@ export const TabBarItem = ({
 	style,
 }) => {
 	const _iconName = (isFocused) ? iconName : (iconName + '_active');
-	const contentColor = (isFocused) ? '#005670' : '#000000';
+	const contentColor = (isFocused) ? '#5C3661' : '#AFAFAF';
 
 	return (
 		<Pressable
@@ -26,13 +26,10 @@ export const TabBarItem = ({
 			style = {styles.button}
 		>
 			<SMIcons
-				size={isFocused ? 24.55 : 21}
-				// size={24}
-				// width={isFocused ? 24.55 : 18.41}
-				// height={isFocused ? 22.54 : 16.91}
+				size={isFocused ? 25 : 21}
 				color={contentColor}
 				// style={[style, {}]}
-				style={[style, !isFocused && styles.unfocusedIcon]}
+				style={style}
 				name={_iconName} />
 		</Pressable>
 	);

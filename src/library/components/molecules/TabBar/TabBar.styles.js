@@ -38,27 +38,11 @@ const styles = StyleSheet.create({
 	},
 	tabBarSpace: {
 		height: TAB_BAR_HEIGHT + bottomInset - TAB_BAR_BORDER_RADIUS,
-		backgroundColor: '#FFFFFF',
+		//backgroundColor: '#FFFFFF',
 	},
 	tabBarItem: {
 		flex: 1,
 		height: TAB_BAR_HEIGHT,
-	},
-	cursor: {
-		left: 4,
-		top: 45,
-		position: 'absolute',
-		bottom: 0,
-	},
-	circle: {
-		left: -3,
-		top: -1,
-		bottom: 0,
-		backgroundColor: '#005670',
-		width: 2.54,
-		height: 2.54,
-		borderRadius: 1.27,
-		alignSelf: 'center',
 	},
 });
 
