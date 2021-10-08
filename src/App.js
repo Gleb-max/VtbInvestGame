@@ -25,7 +25,7 @@ const App = () => {
   return isLoading ? (
     <Text>Loading</Text>
   ) : lookedWelcome ? (
-    <NavigationContainer >
+    <NavigationContainer>
       <AppNavigation />
     </NavigationContainer>
   ) : (

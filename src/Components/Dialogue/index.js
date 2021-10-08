@@ -1,9 +1,34 @@
-import React from 'react';
-import {Image, SafeAreaView, ScrollView, Text, View} from 'react-native';
+import React, {useEffect, useState} from 'react';
+import {
+  Image,
+  SafeAreaView,
+  ScrollView,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import {styles} from './styles';
 import commonStyles from '../../MixIn/commonStyles';
 
-const Dialogue = () => {
+const Dialogue = props => {
+  // props:
+  //   messages: array
+  //   onFinish: function to be called after showing all messages
+  const [dialogueIndex, setDialogueIndex] = useState(0);
+  const [text, setText] = useState('');
+
+  useEffect(() => {
+    if (props.messages && dialogueIndex < props.messages.length) {
+      setText(props.messages[dialogueIndex]);
+      return;
+    }
+
+    console.log('dialogue finished');
+    if (props.onFinish) {
+      props.onFinish();
+    }
+  }, [dialogueIndex]);
+
   return (
     <View style={styles.container}>
       <Image
@@ -12,13 +37,16 @@ const Dialogue = () => {
       />
       <SafeAreaView style={styles.textContainer}>
         <ScrollView>
-          <Text style={commonStyles.text}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis
-            consectetur dignissimos dolore dolores et eum, explicabo facere hic,
-            illo maxime mollitia nam nobis placeat reiciendis sapiente, sequi
-            unde voluptatibus. Optio.
-          </Text>
+          <Text style={commonStyles.text}>{text}</Text>
         </ScrollView>
+        <TouchableOpacity
+          style={styles.nextBtn}
+          onPress={() => setDialogueIndex(dialogueIndex + 1)}>
+          <Image
+            source={require('../../../assets/images/next.png')}
+            style={styles.nextImage}
+          />
+        </TouchableOpacity>
       </SafeAreaView>
     </View>
   );

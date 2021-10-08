@@ -20,4 +20,13 @@ export const styles = StyleSheet.create({
     flex: 1,
     elevation: 2,
   },
+  nextImage: {
+    width: 30,
+    height: 30,
+  },
+  nextBtn: {
+    position: 'absolute',
+    bottom: 3,
+    right: 3,
+  },
 });
