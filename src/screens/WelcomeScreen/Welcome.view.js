@@ -9,8 +9,6 @@ import Colors from '../../Constants/Colors';
 
 import SimpleButton from '../../Components/SimpleButton';
 
-import {saveUser, updateUser} from '../../Utils/Storage';
-
 //other deps
 // import SwitchSelector from 'react-native-switch-selector';
 
@@ -70,7 +68,6 @@ export const WelcomeView = ({onWelcomeComplete}) => {
             <SimpleButton
               text={'Далее'}
               onPress={() => {
-                updateUser({lookedWelcome: true});
                 onWelcomeComplete();
               }}
               containerStyle={{alignSelf: 'center', marginTop: 20, width: 100}}
