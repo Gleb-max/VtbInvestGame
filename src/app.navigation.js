@@ -3,9 +3,9 @@ import React from 'react';
 
 //navigation
 import { enableScreens } from 'react-native-screens';
+import {HomeNavigation} from './Screens/main';
 
 //navigators
-import { HomeNavigation } from './screens/main';
 
 //native-powered screen containers
 //run before any navigation stacks render
