@@ -2,6 +2,7 @@ import React from 'react';
 import {getUser} from './Utils/Storage';
 
 import {Text} from 'react-native';
+import ProgressScreen from './Screens/ProgressScreen';
 
 import WelcomeScreen from './screens/WelcomeScreen';
 
