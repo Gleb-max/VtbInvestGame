@@ -13,7 +13,7 @@ export const ProgressScreen = () => {
       <ProgressBlock active={true} text={'Облигации'} />
       <ProgressBlock active={false} text={'Фонды'} />
       <ProgressBlock active={false} text={'Акции'} />
-      <Dialogue />
+      <Dialogue messages={['Привет', 'Как дела', 'Каддилак']} />
     </View>
   );
 };
