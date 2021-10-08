@@ -12,6 +12,10 @@ target 'VtbInvestGame' do
     :hermes_enabled => false
   )
 
+  pod 'RNReanimated', :path => '../node_modules/react-native-reanimated'
+
+  pod 'RNSVG', :path => '../node_modules/react-native-svg'
+
   target 'VtbInvestGameTests' do
     inherit! :complete
     # Pods for testing
