@@ -1,9 +1,8 @@
-/* eslint-disable prettier/prettier */
 import React from 'react';
 import {getUser} from './Utils/Storage';
 
 import {Text} from 'react-native';
-import {ProgressScreen} from './Screens/ProgressScreen';
+import {ProgressScreen} from './screens/ProgressScreen';
 
 import {WelcomeNavigation} from './screens/WelcomeScreen';
 

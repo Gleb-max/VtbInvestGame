@@ -72,7 +72,6 @@ export const WelcomeView = ({onWelcomeComplete}) => {
               onPress={() => {
                 updateUser({lookedWelcome: true});
                 onWelcomeComplete();
-                //console.warn('not implement');
               }}
               containerStyle={{alignSelf: 'center', marginTop: 20, width: 100}}
             />

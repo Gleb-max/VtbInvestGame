@@ -11,12 +11,12 @@ export const WelcomeScreen = ({
 
 }) => {
 	//navigation
-	const navigation = useNavigation();
+	// const navigation = useNavigation();
 
 	//callbacks
 	const _onWelcomeComplete = React.useCallback(() => {
-		navigation.navigate('main/home');
-	}, [navigation]);
+		console.warn('not implement');
+	}, []);
 
 	return (
 		<WelcomeView
