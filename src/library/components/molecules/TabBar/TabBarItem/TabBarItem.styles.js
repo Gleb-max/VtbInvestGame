@@ -4,23 +4,10 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
 	button: {
-		width: 74,
-		height: 64,
+		flex: 1,
 		alignItems: 'center',
-		paddingTop: 15,
+		justifyContent: 'center',
 		...Helpers.boxShadow('rgb(223, 227, 229)', { x: 0, y: 4 }, 50, 0.3, 0.7),
-	},
-	circle: {
-		left: -1.5,
-		top: -1,
-		backgroundColor: '#005670',
-		width: 2.54,
-		height: 2.54,
-		borderRadius: 1.27,
-		alignSelf: 'center',
-	},
-	unfocusedIcon: {
-		marginTop: 5,
 	},
 });
 
