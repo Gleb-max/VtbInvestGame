@@ -5,10 +5,12 @@ export const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
     alignItems: 'center',
+    flexDirection: 'row',
+    marginVertical: 10,
   },
-  verticalLine: {
-    height: 200,
-    width: 2,
+  line: {
+    width: 200,
+    height: 2,
     backgroundColor: Colors.lightGray,
     position: 'absolute',
   },
