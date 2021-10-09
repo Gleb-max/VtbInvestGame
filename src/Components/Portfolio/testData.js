@@ -1,3 +1,5 @@
+import {DocumentType} from '../../Constants/Documents';
+
 export const testData = [
   {
     name: 'Название бумаги',
@@ -7,6 +9,7 @@ export const testData = [
     delta: '0.05%',
     description: 'Ценная бумага, покупай быстрее!',
     country: 'США',
+    type: DocumentType.stock,
   },
   {
     name: 'Название бумаги',
@@ -16,6 +19,7 @@ export const testData = [
     delta: '0.05%',
     description: 'Ценная бумага, покупай быстрее!',
     country: 'США',
+    type: DocumentType.bond,
   },
   {
     name: 'Название бумаги',
@@ -25,6 +29,7 @@ export const testData = [
     delta: '0.05%',
     description: 'Ценная бумага, покупай быстрее!',
     country: 'США',
+    type: DocumentType.stock,
   },
   {
     name: 'Абоба',
@@ -34,5 +39,6 @@ export const testData = [
     delta: '0.05%',
     description: 'Абоба',
     country: 'США',
+    type: DocumentType.fund,
   },
 ];
