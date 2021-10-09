@@ -6,12 +6,12 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',
+    marginVertical: 10,
   },
   line: {
     width: 200,
     height: 2,
     backgroundColor: Colors.lightGray,
-    top: 30,
     position: 'absolute',
   },
 });

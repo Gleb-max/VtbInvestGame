@@ -16,7 +16,10 @@ const ProgressBlock = props => {
       </Text>
 
       {props.active ? (
-        <View />
+        <Image
+          source={require('../../../assets/images/check-mark.png')}
+          style={styles.image}
+        />
       ) : (
         <Image
           source={require('../../../assets/images/lock.png')}

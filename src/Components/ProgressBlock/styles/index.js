@@ -3,13 +3,12 @@ import Colors from '../../../Constants/Colors';
 
 export const styles = StyleSheet.create({
   containerBase: {
-    width: 90,
+    width: 100,
     height: 60,
     borderRadius: 20,
     borderWidth: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    marginVertical: 10,
     elevation: 8,
     marginHorizontal: 10,
   },
