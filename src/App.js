@@ -1,34 +1,28 @@
 import React from 'react';
-import {getUser} from './Utils/Storage';
 
-import {Text} from 'react-native';
-import {ProgressScreen} from './screens/ProgressScreen';
 import {LoadingScreen} from './screens/LoadingScreen';
 
-import {WelcomeNavigation} from './screens/WelcomeScreen';
+//redux
+import {Provider} from 'react-redux';
+import {PersistGate} from 'redux-persist/integration/react';
+import {store, persistor} from './redux/store';
 
 //navigation
 import {NavigationContainer} from '@react-navigation/native';
-import {AppNavigation} from './app.navigation';
+import AppNavigation from './app.navigation';
 
 const App = () => {
-  const [isLoading, setIsLoading] = React.useState(true);
-  const [lookedWelcome, setLookedWelcome] = React.useState();
-  React.useEffect(() => {
-    getUser().then(user => {
-      setIsLoading(false);
-      setLookedWelcome(user.lookedWelcome);
-    });
-  }, []);
-
-  return isLoading ? (
-    <LoadingScreen />
-  ) : lookedWelcome ? (
-    <NavigationContainer>
-      <AppNavigation />
-    </NavigationContainer>
-  ) : (
-    <WelcomeNavigation />
+  return (
+    <Provider store={store}>
+      <PersistGate
+        loading={<LoadingScreen />}
+        onBeforeLift={() => new Promise(resolve => setTimeout(resolve, 1000))}
+        persistor={persistor}>
+        <NavigationContainer>
+          <AppNavigation />
+        </NavigationContainer>
+      </PersistGate>
+    </Provider>
   );
 };
 export default App;

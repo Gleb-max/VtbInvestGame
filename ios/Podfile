@@ -18,6 +18,8 @@ target 'VtbInvestGame' do
 
   pod 'RNFastImage', :path => '../node_modules/react-native-fast-image'
 
+  pod 'RNCAsyncStorage', :path => '../node_modules/@react-native-async-storage/async-storage'
+
   target 'VtbInvestGameTests' do
     inherit! :complete
     # Pods for testing

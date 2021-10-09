@@ -1,22 +1,19 @@
-/* eslint-disable prettier/prettier */
 import React from 'react';
 
-import {updateUser} from '../../Utils/Storage';
+//redux
+import {store} from '../../redux/store';
+
+//actions
+import {welcomeComplete} from '../../redux/actions';
 
 //views
-import { WelcomeView } from './Welcome.view';
+import {WelcomeView} from './Welcome.view';
 
-export const WelcomeScreen = ({
+export const WelcomeScreen = ({}) => {
+  //callbacks
+  const _onWelcomeComplete = React.useCallback(() => {
+    store.dispatch(welcomeComplete());
+  }, []);
 
-}) => {
-	//callbacks
-	const _onWelcomeComplete = React.useCallback(() => {
-		updateUser({lookedWelcome: true});
-		console.warn('not implement');
-	}, []);
-
-	return (
-		<WelcomeView
-			onWelcomeComplete={_onWelcomeComplete} />
-	);
+  return <WelcomeView onWelcomeComplete={_onWelcomeComplete} />;
 };
