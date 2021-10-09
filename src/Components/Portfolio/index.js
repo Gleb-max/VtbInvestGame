@@ -4,11 +4,11 @@ import {styles} from './styles';
 import {PortfolioItem} from './PortfolioItem';
 import {testData} from './testData';
 
-const Portfolio = () => {
+const Portfolio = props => {
   return (
     <View style={styles.container}>
       <FlatList
-        data={testData}
+        data={props.data || testData}
         renderItem={({item}) => (
           <PortfolioItem
             name={item.name}
