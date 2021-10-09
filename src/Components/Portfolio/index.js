@@ -9,15 +9,7 @@ const Portfolio = () => {
     <View style={styles.container}>
       <FlatList
         data={testData}
-        renderItem={({item}) => (
-          <PortfolioItem
-            name={item.name}
-            cost={item.cost}
-            count={item.count}
-            image={item.image}
-            index={item.index}
-          />
-        )}
+        renderItem={({item}) => <PortfolioItem item={item} />}
       />
     </View>
   );

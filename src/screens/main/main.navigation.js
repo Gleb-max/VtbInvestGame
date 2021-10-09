@@ -8,30 +8,10 @@ import {MainNavigation} from '../MainScreen';
 // import { NewsNavigation } from 'screens/NewsScreen';
 // import { AnalyticsNavigation } from 'screens/AnalyticsScreen';
 // import { AdvicesNavigation } from 'screens/AdvicesScreen';
-import {ProfileScreen} from '../ProfileScreen';
+import {ProfileNavigation} from '../ProfileScreen';
 
 //features navigators
-// import { NotificationsNavigation } from 'screens/NotificationsScreen';
-// import { AnnouncementsNavigation } from 'screens/AnnouncementsScreen';
-// import { ReceiptsNavigation } from 'screens/ReceiptsScreen';
-// import { CallingMasterNavigation } from 'screens/CallingMasterScreen';
-// import { SupportNavigation } from 'screens/SupportScreen';
-// import { ContactsNavigation } from 'screens/ContactsScreen';
-// import { RegistarionRequestNavigation } from 'screens/RegistrationRequest';
-// import { RequestHistoryNavigation } from 'screens/RequestHistoryScreen';
-// import { RequestDetailsNavigation } from 'screens/RequestDetailsScreen';
-// import { AdviceItemNavigation } from 'screens/AdviceItemScreen';
-// import { InformationNavigation } from 'screens/InformationScreen';
-// import { AccountNavigation } from 'screens/AccountScreen';
-// import { DevicesNavigation } from 'screens/DevicesScreen';
-// import { MeterSettingsNavigation } from 'screens/MeterSettingsScreen';
-// import { MeterPhotoNavigation } from 'screens/MeterPhotoScreen';
-// import { NewDeviceNavigation } from 'screens/NewDeviceScreen';
-// import { SuccessNewDeviceNavigation } from 'screens/SuccessNewDeviceScreen';
-// import { UserSchedulesNavigation } from 'screens/UserSchedulesScreen';
-// import { ScheduleSettingsNavigation } from 'screens/ScheduleSettingsScreen';
-// import { NewNumberNavigation } from 'screens/NewNumberScreen';
-// import { DeleteNumberNavigation } from 'screens/DeleteNumberScreen';
+import {DocumentDetailNavigation} from '../DocumentDetail';
 
 //components
 import {TabBarContainer} from '../../library/components/molecules';
@@ -88,7 +68,7 @@ const routes = [
   // },
   {
     ...mapRouteNameToData['main/account'],
-    screen: ProfileScreen,
+    screen: ProfileNavigation,
   },
 ];
 
@@ -144,7 +124,10 @@ export const HomeNavigation = ({
     <HomeNativeStack.Navigator
       screenOptions={{headerShown: false, stackAnimation: 'default'}}>
       <HomeNativeStack.Screen name="main" component={_renderBottomTabBar} />
-      <HomeNativeStack.Screen name="progress" component={ProgressScreen} />
+      <HomeNativeStack.Screen
+        name="document_detail"
+        component={DocumentDetailNavigation}
+      />
 
       {/* <HomeNativeStack.Screen
 				name='notifications'

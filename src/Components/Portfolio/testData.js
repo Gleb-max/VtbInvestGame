@@ -27,12 +27,12 @@ export const testData = [
     country: 'США',
   },
   {
-    name: 'Название бумаги',
+    name: 'Абоба',
     cost: 1000,
     index: 'IMOEX',
     image: require('../../../assets/images/ruble.png'),
     delta: '0.05%',
-    description: 'Ценная бумага, покупай быстрее!',
+    description: 'Абоба',
     country: 'США',
   },
 ];

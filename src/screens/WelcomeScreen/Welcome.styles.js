@@ -6,19 +6,19 @@ import Colors from '../../Constants/Colors';
 
 const styles = StyleSheet.create({
 	text: {
-	  paddingHorizontal: 30,
-	  textAlign: 'center',
+		paddingHorizontal: 30,
+		textAlign: 'center',
 	},
 	sliderText: {
-	  alignSelf: 'center',
-	  color: Colors.black,
+		alignSelf: 'center',
+		color: Colors.black,
 	},
 	infoContainer: {
-	  marginTop: 'auto',
-	  marginBottom: 'auto',
-	  justifyContent: 'center',
+		marginTop: 'auto',
+		marginBottom: 'auto',
+		justifyContent: 'center',
 	},
   });
-  
+
 
 export default styles;

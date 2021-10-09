@@ -1,8 +1,8 @@
 import {StyleSheet} from 'react-native';
-import commonStyles from '../../../MixIn/commonStyles';
-import Colors from '../../../Constants/Colors';
+import commonStyles from '../../MixIn/commonStyles';
+import Colors from '../../Constants/Colors';
 
-export const styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {},
   header: {
     ...commonStyles.text,
@@ -35,3 +35,5 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default styles;
