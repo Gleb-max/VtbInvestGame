@@ -11,6 +11,7 @@ import { View, Text } from 'react-native';
 //styles
 import styles from './Main.styles';
 import DocumentDetail from '../DocumentDetail';
+import DocumentList from '../DocumentList';
 // import { GilroyText, SMIcons } from 'library/components/atoms';
 
 
@@ -42,6 +43,6 @@ export const MainView = ({
 	// 	return switchItem === 'hot' ? '#FF5B5B' : '#005670';
 	// };
 	return (
-		<DocumentDetail/>
+		<DocumentList/>
 	);
 };
