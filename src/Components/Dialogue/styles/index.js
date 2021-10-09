@@ -4,6 +4,7 @@ import Colors from '../../../Constants/Colors';
 export const styles = StyleSheet.create({
   container: {
     position: 'absolute',
+    alignSelf: 'center',
     bottom: 20,
     width: 340,
     height: 230,
@@ -28,5 +29,6 @@ export const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 3,
     right: 3,
+    padding: 2,
   },
 });

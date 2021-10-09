@@ -18,7 +18,7 @@ export const ProfileScreen = () => {
 
   return (
     <SafeAreaView style={commonStyles.container}>
-      <View style={styles.horizontalContainer}>
+      <View style={commonStyles.horizontalContainer}>
         <Text style={commonStyles.text}>Уровень:</Text>
         <TouchableOpacity
           onPress={() => {
@@ -35,7 +35,7 @@ export const ProfileScreen = () => {
       </View>
       {showLevelDetail ? <ProgressScreen /> : <View />}
 
-      <Text style={styles.header}>Брокерский счет:</Text>
+      {/*<Text style={styles.header}>Брокерский счет:</Text>*/}
       <Text style={styles.money}>{getSpacedValue(12345) + ' $'}</Text>
       <Text style={styles.percent}>{'-123% за все время'}</Text>
       <Text style={styles.header}>Портфель:</Text>

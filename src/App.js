@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import {LoadingScreen} from './screens/LoadingScreen';
 
@@ -10,8 +10,13 @@ import {store, persistor} from './redux/store';
 //navigation
 import {NavigationContainer} from '@react-navigation/native';
 import AppNavigation from './app.navigation';
+import Dialogue from './Components/Dialogue';
+import {View} from 'react-native';
 
 const App = () => {
+  // TODO move to redux
+  const [showDialogue, setShowDialogue] = useState(true);
+
   return (
     <Provider store={store}>
       <PersistGate
@@ -21,6 +26,17 @@ const App = () => {
         <NavigationContainer>
           <AppNavigation />
         </NavigationContainer>
+
+        {showDialogue ? (
+          <Dialogue
+            messages={['Jopa', 'Copa', 'Bopda']}
+            onFinish={() => {
+              setShowDialogue(false);
+            }}
+          />
+        ) : (
+          <View />
+        )}
       </PersistGate>
     </Provider>
   );

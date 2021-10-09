@@ -12,6 +12,9 @@ const commonStyles = StyleSheet.create({
     fontFamily: 'Roboto',
     fontSize: 15,
   },
+  horizontalContainer: {
+    flexDirection: 'row',
+  },
 });
 
 export default commonStyles;
