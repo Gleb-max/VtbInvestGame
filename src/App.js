@@ -15,7 +15,7 @@ import {View} from 'react-native';
 
 const App = () => {
   // TODO move to redux
-  const [showDialogue, setShowDialogue] = useState(true);
+  const [showDialogue, setShowDialogue] = useState(false);
 
   return (
     <Provider store={store}>

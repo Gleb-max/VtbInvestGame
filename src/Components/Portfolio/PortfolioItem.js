@@ -3,7 +3,7 @@ import {Text, View} from 'react-native';
 import {styles} from './styles';
 import commonStyles from '../../MixIn/commonStyles';
 import {LogoImage} from '../../library/components';
-import CircleImage from '../CircleImage';
+import {CircleImage} from '../CircleImage';
 
 export const PortfolioItem = props => {
   return (

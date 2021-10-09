@@ -2,7 +2,7 @@ import React from 'react';
 import {Image} from 'react-native';
 import Colors from '../../Constants/Colors';
 
-const CircleImage = props => {
+export const CircleImage = props => {
   const baseSize = 40;
   return (
     <Image
@@ -17,4 +17,4 @@ const CircleImage = props => {
   );
 };
 
-export default CircleImage;
+

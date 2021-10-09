@@ -14,6 +14,7 @@ const commonStyles = StyleSheet.create({
   },
   horizontalContainer: {
     flexDirection: 'row',
+    alignItems: 'center',
   },
 });
 
