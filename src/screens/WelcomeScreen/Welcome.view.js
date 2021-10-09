@@ -17,26 +17,23 @@ import SimpleButton from '../../Components/SimpleButton';
 
 //styles
 import styles from './Welcome.styles';
+import {getSpacedValue} from '../../Utils/String';
 // import { GilroyText, SMIcons } from 'library/components/atoms';
 
 export const WelcomeView = ({onWelcomeComplete}) => {
   const [sliderValue, setSliderValue] = React.useState(1100000);
   const [showAnswer, setShowAnswer] = React.useState(false);
 
-  const getBeautifulValue = () => {
-    return sliderValue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
-  };
-
   return (
     <View style={commonStyles.container}>
       <View style={styles.infoContainer}>
         <Text style={[commonStyles.text, styles.text]}>
-          {'Чтобы шикануть как на миллион\n в 2014 году нужно:'}
+          {'Чтобы шикануть как на миллион\n в 2014 году сегодня нужно:'}
         </Text>
 
         <Text
           style={[commonStyles.text, styles.sliderText, {marginBottom: 20}]}>
-          {getBeautifulValue()}
+          {getSpacedValue(sliderValue)}
         </Text>
 
         <Slider

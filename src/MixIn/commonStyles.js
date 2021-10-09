@@ -6,6 +6,7 @@ const commonStyles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 10,
     flex: 1,
+    backgroundColor: Colors.white,
   },
   text: {
     fontFamily: 'Roboto',

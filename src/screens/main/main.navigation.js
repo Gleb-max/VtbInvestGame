@@ -36,6 +36,8 @@ import {ProfileScreen} from '../ProfileScreen';
 //components
 import {TabBarContainer} from '../../library/components/molecules';
 
+import {ProgressScreen} from '../ProgressScreen';
+
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 //routes
@@ -142,6 +144,7 @@ export const HomeNavigation = ({
     <HomeNativeStack.Navigator
       screenOptions={{headerShown: false, stackAnimation: 'default'}}>
       <HomeNativeStack.Screen name="main" component={_renderBottomTabBar} />
+      <HomeNativeStack.Screen name="progress" component={ProgressScreen} />
 
       {/* <HomeNativeStack.Screen
 				name='notifications'
