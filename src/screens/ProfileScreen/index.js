@@ -14,7 +14,7 @@ import {ProgressScreen} from '../ProgressScreen';
 import Portfolio from '../../Components/Portfolio';
 
 export const ProfileScreen = () => {
-  const [showLevelDetail, setShowLevelDetail] = useState(false);
+  const [showLevelDetail, setShowLevelDetail] = useState(true);
 
   return (
     <SafeAreaView style={commonStyles.container}>

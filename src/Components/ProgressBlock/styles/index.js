@@ -3,14 +3,15 @@ import Colors from '../../../Constants/Colors';
 
 export const styles = StyleSheet.create({
   containerBase: {
-    width: 120,
-    height: 100,
+    width: 90,
+    height: 60,
     borderRadius: 20,
     borderWidth: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: 20,
+    marginVertical: 10,
     elevation: 8,
+    marginHorizontal: 10,
   },
 
   containerActive: {
@@ -22,7 +23,7 @@ export const styles = StyleSheet.create({
     borderColor: Colors.black,
   },
   image: {
-    width: 40,
-    height: 40,
+    width: 30,
+    height: 30,
   },
 });
