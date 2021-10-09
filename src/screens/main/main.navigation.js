@@ -42,6 +42,7 @@ import { ProfileScreen } from '../ProfileScreen';
 import { TabBarContainer } from '../../library/components/molecules';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {ProgressScreen} from "../ProgressScreen";
 
 
 //routes

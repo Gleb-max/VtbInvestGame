@@ -8,12 +8,11 @@ import Dialogue from '../../Components/Dialogue';
 
 export const ProgressScreen = () => {
   return (
-    <View style={[commonStyles.container, styles.container]}>
+    <View style={[styles.container]}>
       <View style={styles.verticalLine} />
       <ProgressBlock active={true} text={'Облигации'} />
       <ProgressBlock active={false} text={'Фонды'} />
       <ProgressBlock active={false} text={'Акции'} />
-      <Dialogue messages={['Привет', 'Как дела', 'Каддилак']} />
     </View>
   );
 };
