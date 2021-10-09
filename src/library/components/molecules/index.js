@@ -13,6 +13,7 @@
 // export { ScenarioItemButton } from './ScenarioItemButton';
 // export { TabBar } from './TabBar';
 export { TabBarContainer } from './TabBar';
+export { LogoImage } from './LogoImage';
 // export { VolumeIndicator } from './VolumeIndicator';
 // export { ProfileHead } from './ProfileHead';
 // export { ProfileSettingsItem } from './ProfileSettingsItem';

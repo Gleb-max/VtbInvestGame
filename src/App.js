@@ -3,14 +3,13 @@ import {getUser} from './Utils/Storage';
 
 import {Text} from 'react-native';
 import {ProgressScreen} from './screens/ProgressScreen';
+import {LoadingScreen} from './screens/LoadingScreen';
 
 import {WelcomeNavigation} from './screens/WelcomeScreen';
 
 //navigation
 import {NavigationContainer} from '@react-navigation/native';
 import {AppNavigation} from './app.navigation';
-
-// console.disableYellowBox = true;
 
 const App = () => {
   const [isLoading, setIsLoading] = React.useState(true);
@@ -23,9 +22,9 @@ const App = () => {
   }, []);
 
   return isLoading ? (
-    <Text>Loading</Text>
+    <LoadingScreen />
   ) : lookedWelcome ? (
-    <NavigationContainer >
+    <NavigationContainer>
       <AppNavigation />
     </NavigationContainer>
   ) : (

@@ -16,6 +16,8 @@ target 'VtbInvestGame' do
 
   pod 'RNSVG', :path => '../node_modules/react-native-svg'
 
+  pod 'RNFastImage', :path => '../node_modules/react-native-fast-image'
+
   target 'VtbInvestGameTests' do
     inherit! :complete
     # Pods for testing
